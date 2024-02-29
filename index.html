@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Botão EPCI</title>
+</head>
+<body>
+  <button onclick="abrirEPCI()">EPCI</button>
+
+  <script>
+    function abrirEPCI() {
+      // URL do site da EPCI
+      var url = "https://epci.pt/";
+
+      // Abrir uma nova janela com as características especificadas
+      var novaJanela = window.open(url, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=100,left=100,width=500,height=400");
+      
+      // Focar a nova janela (opcional)
+      if (novaJanela) {
+        novaJanela.focus();
+      } else {
+        alert("O bloqueio de pop-ups pode estar ativado. Por favor, permita pop-ups para este site.");
+      }
+    }
+  </script>
+</body>
+</html>
